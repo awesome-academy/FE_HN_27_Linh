@@ -1,3 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+header {
+  background-color: #ffffff1a;
+  color: #d6d6d6;
+  position: absolute;
+  width: 100%;
+}
+header .container {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+header .container a {
+  color: #d6d6d6;
+  text-decoration: none;
+  transition: 0.5s;
+}
+header .container a:hover {
+  color: #e6ae48;
+  border-bottom: 1px solid #e6ae48;
+}
+header .container__left span {
+  padding: 0 10px;
+}
+header .container__right form {
+  border-left: 1.5px solid white;
+  padding-left: 10px;
+}
+header .container__right form input {
+  width: 250px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #d6d6d6;
+}
+header .container__right form input::placeholder {
+  font-style: italic;
+  color: #b3afaa;
+}
 
 /*# sourceMappingURL=style.css.map */
