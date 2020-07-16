@@ -1,0 +1,10 @@
+header
+    .container
+        .container__left
+            each val in headerItems 
+                a(href="#")=val 
+                span -
+        .container__right
+            form
+                input(placeholder="Tìm kiếm ở đây...")
+                a(href="#"): i.fas.fa-search
