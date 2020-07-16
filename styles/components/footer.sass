@@ -1,0 +1,77 @@
+footer 
+    .info
+        padding-bottom: 35px
+        border-bottom: 1px solid #e7e7e7
+        .container
+            display: flex
+        h2 
+            text-transform: uppercase
+            font-weight: normal
+            letter-spacing: 3px
+            margin-bottom: 15px
+        &__about
+            flex: 1
+            text-transform: uppercase
+            li 
+                margin-bottom: 5px
+                a 
+                    color: $SecondaryColor
+        &__email
+            flex: 2
+            display: flex 
+            flex-direction: column
+            justify-content: space-between
+            p
+                color: $SecondaryColor
+            form 
+                display: flex
+                input
+                    padding: 8px 15px 8px 17px
+                    border: 1px solid #787878
+                    width: 245px
+                    &::placeholder
+                        font-style: italic
+                        color: $SecondaryColor
+                button 
+                    color: white
+                    background-color: black
+                    padding: 10px 15px
+                    margin-left: -5px
+                    border: none
+                    outline: none
+                    cursor: pointer
+                .triangle
+                    border-top: 18px solid transparent
+                    border-left: 20px solid black
+                    border-bottom: 18px solid transparent
+            &-social
+                margin-bottom: 5px
+                a
+                    color: $SecondaryColor
+                    margin-right: 15px
+                    transition: 0.5s
+                    &:hover
+                        color: $PrimaryColor
+        &__contact
+            flex: 2
+            display: flex 
+            flex-direction: column
+            justify-content: space-between
+            i
+                margin-right: 10px
+            &-address
+                div 
+                    display: flex
+            &-phone
+                margin-bottom: 5px
+                span 
+                    margin-right: 20px
+                    i 
+                        color: $PrimaryColor
+                        text-transform: uppercase
+    .end
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: $SecondaryColor
+        padding: 15px 0

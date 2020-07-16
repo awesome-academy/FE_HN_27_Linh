@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
 .container {
   width: 75%;
   margin: auto;
@@ -21,7 +33,6 @@ header .container {
 }
 header .container a {
   color: #d6d6d6;
-  text-decoration: none;
   transition: 0.5s;
 }
 header .container a:hover {
@@ -40,12 +51,110 @@ header .container__right form input {
   margin-right: 10px;
   background-color: transparent;
   border: none;
-  outline: none;
   color: #d6d6d6;
 }
 header .container__right form input::placeholder {
   font-style: italic;
   color: #b3afaa;
+}
+
+footer .info {
+  padding-bottom: 35px;
+  border-bottom: 1px solid #e7e7e7;
+}
+footer .info .container {
+  display: flex;
+}
+footer .info h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+footer .info__about {
+  flex: 1;
+  text-transform: uppercase;
+}
+footer .info__about li {
+  margin-bottom: 5px;
+}
+footer .info__about li a {
+  color: #818181;
+}
+footer .info__email {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .info__email p {
+  color: #818181;
+}
+footer .info__email form {
+  display: flex;
+}
+footer .info__email form input {
+  padding: 8px 15px 8px 17px;
+  border: 1px solid #787878;
+  width: 245px;
+}
+footer .info__email form input::placeholder {
+  font-style: italic;
+  color: #818181;
+}
+footer .info__email form button {
+  color: white;
+  background-color: black;
+  padding: 10px 15px;
+  margin-left: -5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+footer .info__email form .triangle {
+  border-top: 18px solid transparent;
+  border-left: 20px solid black;
+  border-bottom: 18px solid transparent;
+}
+footer .info__email-social {
+  margin-bottom: 5px;
+}
+footer .info__email-social a {
+  color: #818181;
+  margin-right: 15px;
+  transition: 0.5s;
+}
+footer .info__email-social a:hover {
+  color: #e6ae48;
+}
+footer .info__contact {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .info__contact i {
+  margin-right: 10px;
+}
+footer .info__contact-address div {
+  display: flex;
+}
+footer .info__contact-phone {
+  margin-bottom: 5px;
+}
+footer .info__contact-phone span {
+  margin-right: 20px;
+}
+footer .info__contact-phone span i {
+  color: #e6ae48;
+  text-transform: uppercase;
+}
+footer .end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #818181;
+  padding: 15px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
