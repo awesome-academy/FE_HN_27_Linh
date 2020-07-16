@@ -1,43 +1,21 @@
 $PrimaryColor: #e6ae48
+$SecondaryColor: #818181
     
 *
     margin: 0
     padding: 0
 
+a 
+    text-decoration: none
+
+ul 
+    list-style: none
+
+input
+    outline: none
+
 .container
     width: 75%
     margin: auto 
 
-header
-    background-color: #ffffff1a
-    color: #d6d6d6
-    position: absolute
-    width: 100%
-    .container
-        padding: 15px 0
-        display: flex
-        justify-content: space-between
-        a 
-            color: #d6d6d6
-            text-decoration: none
-            transition: 0.5s
-            &:hover 
-                color: $PrimaryColor
-                border-bottom: 1px solid $PrimaryColor
-        &__left
-            span 
-                padding: 0 10px
-        &__right
-            form 
-                border-left: 1.5px solid white
-                padding-left: 10px
-                input
-                    width: 250px
-                    margin-right: 10px
-                    background-color: transparent
-                    border: none
-                    outline: none
-                    color: #d6d6d6
-                    &::placeholder
-                        font-style: italic
-                        color: #b3afaa
+@import 'components/header', 'components/footer'
