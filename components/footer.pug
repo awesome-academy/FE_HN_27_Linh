@@ -4,19 +4,13 @@ footer
             .info__about
                 h2 Thông tin
                 ul 
-                    li: a(href="#") Về chúng tôi
-                    li: a(href="#") Giao hàng
-                    li: a(href="#") Cảm nghĩ
-                    li: a(href="#") Lưu trữ
-                    li: a(href="#") Chính sách riêng tư
+                    each val in footerInfo
+                        li: a(href="#")=val
             .info__about
                 h2 Mua hàng
                 ul 
-                    li: a(href="#") Vận chuyển và trả hàng
-                    li: a(href="#") Mua hàng an toàn
-                    li: a(href="#") Vận quốc tế
-                    li: a(href="#") Liên kết
-                    li: a(href="#") Dịch vụ giảm giá
+                    each val in footerBuy 
+                        li: a(href="#")=val
             .info__email
                 .info__email-text
                     h2 Gửi email
@@ -26,10 +20,8 @@ footer
                     button GỬI
                     .triangle
                 .info__email-social
-                    a(href="#"): i.fab.fa-twitter
-                    a(href="#"): i.fab.fa-google-plus-g
-                    a(href="#"): i.fab.fa-linkedin-in
-                    a(href="#"): i.fas.fa-rss
+                    each val in footerSocial
+                        a(href="#"): i(class=val)
             .info__contact
                 .info__contact-address
                     h2 Liên hệ

@@ -5,9 +5,7 @@ footer
         .container
             display: flex
         h2 
-            text-transform: uppercase
-            font-weight: normal
-            letter-spacing: 3px
+            @extend .introText
             margin-bottom: 15px
         &__about
             flex: 1
@@ -26,24 +24,28 @@ footer
             form 
                 display: flex
                 input
-                    padding: 8px 15px 8px 17px
+                    padding: 5px 15px 5px 17px
                     border: 1px solid #787878
-                    width: 245px
+                    width: 60%
                     &::placeholder
                         font-style: italic
                         color: $SecondaryColor
                 button 
-                    color: white
-                    background-color: black
-                    padding: 10px 15px
+                    @extend .blackBtn
                     margin-left: -5px
-                    border: none
-                    outline: none
-                    cursor: pointer
+                    &:hover
+                        ~.triangle
+                            border-top: 14px solid transparent
+                            border-left: 15px solid $PrimaryColor
+                            border-bottom: 14px solid transparent
+                            transition: 0.5s
                 .triangle
-                    border-top: 18px solid transparent
-                    border-left: 20px solid black
-                    border-bottom: 18px solid transparent
+                    border-top: 14px solid transparent
+                    border-left: 15px solid black
+                    border-bottom: 14px solid transparent
+                    &:hover 
+                        ~button
+                            background-color: $PrimaryColor
             &-social
                 margin-bottom: 5px
                 a

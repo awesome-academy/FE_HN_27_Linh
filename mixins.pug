@@ -1,0 +1,54 @@
+mixin productListItem (data)
+    - for (var i = 0; i < data.length; i++)
+        .new__product-item
+            .new__product-item-img(
+                style="background: url(../../assets/product/" + data[i].image + ".jpg) no-repeat bottom; background-size: contain"
+            )
+                case data[i].tag
+                    when ""
+                        - break
+                    when "sale"
+                        p.saletag-small--sale Sale
+                    when "new"
+                        p.saletag-small--new Mới 
+                    when "hot"
+                        p.saletag-small--hot Hot
+                .new__product-item-img-buttons
+                    a(href="#")
+                        i.fas.fa-heart
+                        | Yêu thích
+                    a(href="#")
+                        i.fas.fa-chart-bar
+                        | So sánh 
+                    a(href="#")
+                        i.fas.fa-compress-alt
+            .new__product-item-detail 
+                p.new__product-item-detail-name rượu vang đà lạt 
+                .new__product-item-detail-price
+                    p.newprice 350.000
+                        span đ
+                    span -
+                    p.oldprice 450.000
+                        span đ
+                button.blackBtn ADD TO CART
+
+mixin galleryItem (data)
+    - for (var i = 0; i < data.length; i++)
+        a(href="#").gallery__img(
+            style="background: url(../../assets/gallery/" + data[i] + ".png) no-repeat center; background-size: cover"
+        )
+            .gallery__img-content
+                p 1987
+                h3 RƯỢU
+
+mixin titleDark (text)
+    h2.introText=text
+    img.titleDark(src="assets/images/title-dark.png")
+
+mixin blogListItem (image, name, author, describe)
+    .other__blog-posts-item
+        img(src="assets/blog/" + image + ".png" width="100%")
+        h3.introText=name
+        small=author 
+        p=describe
+        a(href="#") Read more
