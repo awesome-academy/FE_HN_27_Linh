@@ -1,0 +1,180 @@
+.slide 
+    +slideBackground("slide-1-2050x898")
+    width: 100%
+    height: 667px
+    animation: slide 15s infinite
+    display: flex
+    align-items: center
+    @keyframes slide
+        50%
+            +slideBackground("slide-2")
+        100%
+            +slideBackground("slide-3")
+
+.menu
+    background-color: black
+    padding: 10px 0
+    .container
+        display: flex 
+        justify-content: space-between
+        align-items: center
+        &__list
+            flex-basis: 80%
+            display: flex
+            justify-content: space-between
+            a 
+                font-size: 1.1rem
+                color: white
+                text-transform: uppercase
+                &:hover 
+                    color: $PrimaryColor
+                    transition: 0.5s
+
+.content
+    background: url("../../assets/images/product.png") left top no-repeat, url("../../assets/images/product2.png") right top no-repeat
+    background-size: 20%, 12%
+    .container
+        .intro
+            padding-top: 5rem
+            width: 70%
+            margin: auto
+            text-align: center
+            @extend .endContent
+            p 
+                color: $SecondaryColor
+                margin-bottom: 30px
+        .sale
+            &__product
+                position: relative
+                background-color: white
+                display: flex
+                width: 60%
+                margin: -29rem auto 10rem auto
+                padding: 8% 8% 0 8%
+                &-img
+                    position: relative
+                    padding: 5% 5% 0 5%
+                    overflow: hidden
+                    flex: 8
+                    text-align: center
+                &-detail
+                    flex: 7
+                    h2 
+                        font-weight: normal
+                        margin-bottom: 5px
+                    &-price
+                        +price(2.5rem, 1.5rem, $PrimaryColor)
+                        padding: 25px 0
+                    &-describe
+                        color: $SecondaryColor
+                        padding: 25px 0
+                    &-time
+                        display: flex 
+                        flex-wrap: wrap
+                        div
+                            flex-basis: 50%
+                            text-align: center
+                            color: $PrimaryColor
+                            padding: 19px 0
+                            border: 1px solid $PrimaryColor
+                            box-sizing: border-box
+                            h2 
+                                font-size: 2.5rem
+                                font-family: utm-caviar
+                            p 
+                                text-transform: uppercase
+        .new
+            @extend .endContent
+            &__title
+                text-align: center
+            &__product
+                margin-top: 30px
+                display: flex
+                justify-content: space-between
+                &-item
+                    flex-basis: 25%
+                    &-img
+                        width: 100%
+                        padding-bottom: 100%
+                        margin-bottom: 20px
+                        position: relative
+                        cursor: pointer
+                        overflow: hidden
+                        &-buttons
+                            position: absolute
+                            width: 100%
+                            bottom: 0
+                            background-color: black
+                            visibility: hidden
+                            opacity: 0
+                            transition: opacity 0.5s, visibility 0.5s
+                            display: flex
+                            justify-content: space-between
+                            a 
+                                flex: 2
+                                display: block
+                                color: white
+                                padding: 5px 0
+                                text-align: center
+                                i 
+                                    margin-right: 10px
+                            a:last-child
+                                flex: 1
+                            a:nth-child(2)
+                                border-right: 2px solid #262626
+                                border-left: 2px solid #262626
+                        &:hover
+                            .new__product-item-img-buttons
+                                visibility: visible
+                                opacity: 1
+
+                    &-detail
+                        text-align: center
+                        &-name
+                            text-transform: uppercase
+                        &-price
+                            padding: 10px 0 20px 0
+                            display: flex
+                            justify-content: center
+                            align-items: flex-end
+                            &>span
+                                margin: 0 5px
+                                color: $SecondaryColor
+                            .newprice
+                                +price(1.2rem, 0.8rem, $PrimaryColor)
+                            .oldprice
+                                +price(0.8rem, 0.5rem, $SecondaryColor)
+                                text-decoration: line-through
+    .gallery
+        display: flex
+        flex-wrap: wrap
+        @extend .endContent
+        &__img
+            flex-basis: 25%
+            padding-bottom: 15%
+            color: white
+            position: relative
+            box-sizing: border-box
+            overflow: hidden
+            transition: 0.5s ease-in-out
+            &-content
+                visibility: hidden
+                opacity: 0
+                transition: opacity 0.5s, visibility 0.5s
+                p 
+                    position: absolute
+                    font-size: 1.5rem
+                    top: 20%
+                    left: 50%
+                    transform: translateX(-50%)
+                h3
+                    font-size: 3.5rem
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    font-weight: normal
+                    transform: translate(-50%, -50%)
+            &:hover 
+                .gallery__img-content
+                    visibility: visible
+                    opacity: 1

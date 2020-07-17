@@ -3,7 +3,8 @@ include mixins.pug
 doctype html
 html(lang='en')
 	head
-		title Drink
+		block title
+			title Drink
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		link(rel='stylesheet' href='styles/style.css')
@@ -18,8 +19,6 @@ html(lang='en')
 			include components/header.pug
 
 		block content
-			main
-				img(src="assets/images/slide-1-2050x898.jpg")
 
 		block footer
 			include components/footer.pug
