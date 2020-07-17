@@ -15,8 +15,7 @@ block content
     .content
         .container
             .intro
-                h2.introText GIỚI THIỆU
-                img.titleDark(src="assets/images/title-dark.png")
+                +titleDark("GIỚI THIỆU")
                 p Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putam
                 button.blackBtn XEM THÊM
             .sale 
@@ -50,7 +49,30 @@ block content
         .container 
             .bestseller.new 
                 .new__title
-                    h2.introText SẢN PHẨM BÁN CHẠY
-                    img.titleDark(src="assets/images/title-dark.png")
+                    +titleDark("SẢN PHẨM BÁN CHẠY")
                 .new__product
                     +productListItem (bestSellerProducts)
+            .other 
+                .other__blog
+                    .other__blog-title
+                        +titleDark("TIN TỨC & BLOG")
+                    .other__blog-posts
+                        each val in blogListItems
+                            +blogListItem(val.image, val.name, val.author, val.describe)
+                .other__customer 
+                    .other__customer-title
+                        +titleDark("KHÁCH HÀNG")
+                    .other__customer-detail 
+                        img(src="assets/blog/elipse.png" width="65")
+                        div
+                            p Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
+                            a(href="#") Read more
+                        img(src="assets/blog/customer.png" width="100")
+                        div
+                            h4 GIANG LT
+                            i Graphic design
+                        .other__customer-detail-buttons 
+                            - for (var i = 0; i < 3; i++)
+                                a(href="#"): i.fas.fa-circle
+            .brand
+                img(src="assets/blog/brand.png" width="100%")

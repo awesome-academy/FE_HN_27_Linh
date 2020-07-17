@@ -69,7 +69,7 @@ input {
   margin: 5px 0 20px 0;
 }
 
-.endContent, .content .gallery, .content .container .new, .content .container .intro {
+.endContent, .content .gallery, .content .container .other, .content .container .new, .content .container .intro {
   padding-bottom: 6rem;
 }
 
@@ -274,7 +274,7 @@ footer .info__email form {
 footer .info__email form input {
   padding: 5px 15px 5px 17px;
   border: 1px solid #787878;
-  width: 250px;
+  width: 60%;
 }
 footer .info__email form input::placeholder {
   font-style: italic;
@@ -488,6 +488,9 @@ footer .end {
   padding: 5px 0;
   text-align: center;
 }
+.content .container .new__product-item-img-buttons a:hover {
+  color: #e6ae48;
+}
 .content .container .new__product-item-img-buttons a i {
   margin-right: 10px;
 }
@@ -536,6 +539,67 @@ footer .end {
 .content .container .new__product-item-detail-price .oldprice span {
   font-size: 0.5rem;
   vertical-align: top;
+}
+.content .container .other {
+  display: flex;
+}
+.content .container .other a {
+  color: #aeaeae;
+}
+.content .container .other a:hover {
+  color: #e6ae48;
+}
+.content .container .other__blog {
+  flex: 2;
+  margin-right: 2%;
+}
+.content .container .other__blog-title {
+  text-align: center;
+}
+.content .container .other__blog-posts {
+  display: flex;
+  justify-content: space-between;
+}
+.content .container .other__blog-posts-item {
+  flex-basis: 48%;
+}
+.content .container .other__blog-posts-item img {
+  margin-bottom: 15px;
+}
+.content .container .other__blog-posts-item h3 {
+  margin-bottom: 5px;
+}
+.content .container .other__blog-posts-item small {
+  color: #cacaca;
+}
+.content .container .other__blog-posts-item p {
+  color: #818181;
+  padding: 5px 0;
+}
+.content .container .other__customer {
+  flex: 1;
+  text-align: center;
+}
+.content .container .other__customer-detail {
+  height: 83%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .container .other__customer-detail div > i {
+  color: #b4b4b4;
+}
+.content .container .other__customer-detail > a {
+  display: block;
+}
+.content .container .other__customer-detail-buttons a {
+  font-size: 0.5rem;
+  padding: 0 3px;
+}
+.content .container .brand {
+  width: 80%;
+  margin: 0 auto 50px auto;
 }
 .content .gallery {
   display: flex;

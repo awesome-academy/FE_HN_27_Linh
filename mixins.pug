@@ -40,3 +40,15 @@ mixin galleryItem (data)
             .gallery__img-content
                 p 1987
                 h3 RƯỢU
+
+mixin titleDark (text)
+    h2.introText=text
+    img.titleDark(src="assets/images/title-dark.png")
+
+mixin blogListItem (image, name, author, describe)
+    .other__blog-posts-item
+        img(src="assets/blog/" + image + ".png" width="100%")
+        h3.introText=name
+        small=author 
+        p=describe
+        a(href="#") Read more
