@@ -12,16 +12,17 @@ block content
             .menu__list
                 each val in menuItems
                     if val === "Rượu vang bò"
-                        a.menu__mega(href="#")=val
+                        .menu__mega
+                            a.menu__list-item(href="#")=val
+                            .menu__submenu 
+                                - for (var i = 0; i < 3; i++)
+                                    .menu__submenu-list
+                                        a.menu__submenu-list-title: h3 Rượu ngoại 
+                                        each val in submenuItmes
+                                            a.menu__submenu-list-item(href="#")=val
+                                .menu__submenu-image
                     else
-                        a(href="#")=val
-        .menu__submenu 
-            - for (var i = 0; i < 3; i++)
-                .menu__submenu-list
-                    a.menu__submenu-list-title: h3 Rượu ngoại 
-                    each val in submenuItmes
-                        a.menu__submenu-list-item(href="#")=val
-            .menu__submenu-image
+                        a.menu__list-item(href="#")=val
 
     .content
         .container
