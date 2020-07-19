@@ -7,11 +7,22 @@ block content
             img(src="assets/images/slideText.png")
     .menu
         .container 
-            .container__logo 
+            .menu__logo 
                 img(src="assets/images/menuLogo.png")
-            .container__list
+            .menu__list
                 each val in menuItems
-                    a(href="#")=val
+                    if val === "Rượu vang bò"
+                        a.menu__mega(href="#")=val
+                    else
+                        a(href="#")=val
+        .menu__submenu 
+            - for (var i = 0; i < 3; i++)
+                .menu__submenu-list
+                    a.menu__submenu-list-title: h3 Rượu ngoại 
+                    each val in submenuItmes
+                        a.menu__submenu-list-item(href="#")=val
+            .menu__submenu-image
+
     .content
         .container
             .intro
