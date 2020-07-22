@@ -1,0 +1,33 @@
+header
+    background-color: #ffffff1a
+    color: #d6d6d6
+    position: absolute
+    width: 100%
+    .container
+        padding: $mdSpace 0
+        display: flex
+        justify-content: space-between
+        a 
+            color: #d6d6d6
+            transition: 0.5s
+            &:hover 
+                color: $PrimaryColor
+                border-bottom: 1px solid $PrimaryColor
+        &__left
+            span 
+                padding: 0 $smSpace
+            span:last-child
+                display: none
+        &__right
+            form 
+                border-left: 1.5px solid white
+                padding-left: $smSpace
+                input
+                    width: 250px
+                    margin-right: $smSpace
+                    background-color: transparent
+                    border: none
+                    color: #d6d6d6
+                    &::placeholder
+                        font-style: italic
+                        color: #b3afaa

@@ -1,0 +1,52 @@
+=slideBackground($image)
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/#{$image}.jpg") bottom no-repeat
+    background-size: cover
+
+=fontFaceGenerator($family, $font)
+    @font-face
+        font-family: "#{$family}"
+        src: url("../assets/fonts/#{$font}.ttf")
+
+=price($pricefontsize, $spanfontsize, $color)
+    font-family: utm-caviar
+    font-size: $pricefontsize
+    color: $color
+    span
+        font-size: $spanfontsize
+        vertical-align: top
+
+=saleTagBig($color)
+    position: absolute
+    top: -1.5rem
+    left: -5.5rem
+    transform: rotate(-45deg)
+    color: white
+    font-size: 2rem
+    padding: 3rem 5.5rem 1rem
+    background-color: $color
+    &::after
+        position: absolute
+        content: ""
+        top: 6.8rem
+        left: -2rem
+        width: 20rem
+        height: 1px
+        background-color: $color
+
+=saleTagSmall($color)
+    position: absolute
+    top: -3.5rem
+    left: -7.5rem
+    transform: rotate(-45deg)
+    color: white
+    font-size: 1rem
+    padding: 5rem 6.5rem 1rem
+    background-color: $color
+    &::after
+        position: absolute
+        content: ""
+        top: 7.5rem
+        left: -2rem
+        width: 20rem
+        height: 1px
+        background-color: $color
