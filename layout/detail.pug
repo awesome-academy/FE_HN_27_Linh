@@ -1,0 +1,42 @@
+extends layout.pug
+block title 
+    title Chi tiết sản phẩm
+block content
+    .pdDetail.container 
+        +breadcrumb(["Trang chủ", "Sản phẩm", "Rượu vang đỏ"])
+        .detail
+            .detail__img 
+                .detail__img-list 
+                    a(href="#"): i.fas.fa-arrow-up
+                    div
+                        each val in [5, 6, 7, 8, 9]
+                            a(href="#"): img(src="assets/product/" + val + ".jpg")
+                    a(href="#"): i.fas.fa-arrow-down
+                .detail__img-image 
+            .detail__describe 
+                h1 RƯỢU NHO NĂM 1987
+                img(src="assets/images/titleleft-dark.png")
+                .detail__describe-price 330,000
+                    span đ
+                .detail__describe-reviews 
+                    .detail__describe-reviews-stars 
+                        - for (var i = 0; i < 5; i++)
+                            span: i.far.fa-star
+                    a.detail__describe-reviews-link(href="#") 1 Review(S)
+                    span |
+                    a.detail__describe-reviews-link(href="#") Add Your Review
+                form.detail__describe-buy 
+                    .detail__describe-buy-color 
+                        label(for="color") Màu sắc 
+                        div 
+                            input(type="radio" name="color" value="champange")
+                            input(type="radio" name="color" value="black")
+                            input(type="radio" name="color" value="cherry" checked)
+                    .detail__describe-buy-size 
+                        label(for="size") Kích cỡ
+                        select#size(name="size")
+                            each val in ["Loại to", "Loại vừa", "Loại nhỏ"]
+                                option(value=val)=val
+                    .detail__describe-buy-quantity 
+                        label(for="quantity") Số lượng
+                        

@@ -52,3 +52,9 @@ mixin blogListItem (image, name, author, describe)
         small=author 
         p=describe
         a(href="#") Read more
+
+mixin breadcrumb (links)
+    .breadcrumb
+        - for (var i = 0; i < links.length; i++) 
+            a.breadcrumb__item(href="#")=links[i] 
+            span /

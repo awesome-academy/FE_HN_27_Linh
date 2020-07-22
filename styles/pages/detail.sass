@@ -1,0 +1,108 @@
+.pdDetail
+    .detail
+        display: flex
+        &__img
+            display: flex
+            flex: 3
+            margin-right: 3rem
+            @extend .endContent
+            &-list
+                display: flex
+                align-items: center
+                flex-direction: column
+                flex-basis: 10%
+                padding: 0 $smSpace
+                +createSolidBorder(1px, $BorderColor)
+                border-right: none
+                a
+                    display: block 
+                    padding: 20px 0
+                div 
+                    margin: $xsSpace 0
+                    text-align: center
+                    a 
+                        border-bottom: 1px solid $BorderColor
+                    a:last-child
+                        border: none
+                    a:nth-child(3)
+                        img 
+                            +createSolidBorder(1px, $PrimaryColor)
+                img 
+                    width: 100%
+                    border: 1px solid transparent
+                    &:hover 
+                        +createSolidBorder(1px, $PrimaryColor)
+            &-image
+                width: 100%
+                background: url("../assets/product/7.jpg") center no-repeat
+                background-size: contain
+                +createSolidBorder(1px, $BorderColor)
+        &__describe
+            flex: 2
+            h1 
+                font-weight: normal
+                margin-bottom: $xsSpace
+            &-price
+                margin-top: $smSpace
+                +price(2.5rem, 1.5rem, $PrimaryColor)
+            &-reviews
+                padding: $smSpace 0
+                border-top: 1px solid $BorderColor
+                border-bottom: 1px solid $BorderColor
+                margin: 20px 0
+                & > span
+                    margin: 0 $xsSpace
+                &-stars
+                    display: inline-block
+                    direction: rtl
+                    span
+                        position: relative
+                        margin-right: $xsSpace
+                        &:hover:before, &:hover ~ span:before 
+                            content: "\f005"
+                            position: absolute
+                            color: #737373
+                            font-family: "Font Awesome 5 Pro"
+                            font-weight: 900
+            &-buy
+                label
+                    color: $SecondaryColor
+                    text-transform: uppercase
+                    display: block
+                    font-size: 1.3rem
+                    margin-bottom: 1rem
+                &-color
+                    margin-bottom: 1rem
+                    div 
+                        input
+                            width: 30px
+                            height: 30px
+                            cursor: pointer
+                            position: relative
+                            margin-right: $smSpace
+                            &::after
+                                content: ""
+                                position: absolute
+                                top: 0
+                                left: 0
+                                width: 100%
+                                height: 100%
+                                +createSolidBorder(2px, white)
+                                outline: 1px solid transparent
+                            &[value=champange]::after
+                                background-color: $PrimaryColor
+                            &[value=black]::after
+                                background-color: black
+                            &[value=cherry]::after
+                                background-color: $CherryColor
+                            &:checked::after, &:hover::after
+                                outline: 1px solid black
+                &-size
+                    margin-bottom: 1rem
+                    select 
+                        padding: $xsSpace $smSpace
+                        font-family: "Times New Roman", Times, serif
+                        outline: none
+                        color: $SecondaryColor
+                        border-color: $SecondaryColor
+                        font-size: 1.1rem
