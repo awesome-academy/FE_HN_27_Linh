@@ -84,7 +84,7 @@ button {
   margin-bottom: 5px;
 }
 
-.endContent, .order, .signup, .login, .blogDetail, .blog, .about, .cart, .pdList .wrapper, .pdList .slide, .pdDetail .product, .pdDetail .more, .pdDetail .detail, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
+.endContent, .address, .order, .signup, .login, .blogDetail, .blog, .about, .cart, .pdList .wrapper, .pdList .slide, .pdDetail .product, .pdDetail .more, .pdDetail .detail, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
   margin-bottom: 6rem;
 }
 
@@ -362,18 +362,39 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin-right: 10px;
 }
 
-.clearfix {
-  clear: both;
+.customCheckbox {
+  position: relative;
+  visibility: hidden;
+}
+.customCheckbox::after {
+  visibility: visible;
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  transform: translateY(40%);
+  background-color: #e6e6e6;
+  border: 1px solid #818181;
+}
+.customCheckbox:checked::after {
+  background-color: #e6ae48;
 }
 
-.textInput, .textArea {
+header {
+  position: relative;
+}
+header .headMenu {
   width: 100%;
+  padding: 15px 0;
+}
+header .headMenu .container {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.5rem;
 }
-.textInput label, .textArea label {
-  width: 10%;
+header .headMenu a:hover {
+  border-bottom: 1px solid #e6ae48;
 }
 
 .blogListItem__title {
@@ -1101,8 +1122,6 @@ footer .end {
 .pdList .wrapper {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
 }
 .pdList .wrapper__sidebar {
   flex-basis: 24%;
@@ -1204,7 +1223,7 @@ footer .end {
 }
 .cart__table-price {
   font-family: utm-caviar;
-  font-size: 2.5rem;
+  font-size: 1.2rem;
   color: #e6ae48;
 }
 .cart__table-price span {
@@ -1253,6 +1272,8 @@ footer .end {
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 .blogDetail .wrapper h3, .blogDetail .wrapper h2 {
   text-transform: uppercase;
@@ -1512,6 +1533,64 @@ footer .end {
 }
 .order__info-inner a {
   text-decoration: underline;
+}
+
+.address__edit {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.address__edit > * {
+  flex-basis: 48%;
+}
+.address__edit-form h3 {
+  font-weight: normal;
+}
+.address__edit-form a {
+  color: #24c5d9;
+  text-decoration: underline;
+  font-size: 1.17em;
+}
+.address__edit-form .textInput label {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.address__edit-form .textInput input {
+  width: 80%;
+}
+.address__edit-form-submit {
+  margin-left: 20%;
+}
+.address__edit-form-submit div {
+  margin: 1rem 0;
+}
+.address__edit-form-submit div label {
+  color: #818181;
+}
+.address__edit-form-submit-edit {
+  background-color: #24c5d9;
+  margin-right: 10px;
+}
+.address__info {
+  margin-top: 2rem;
+  width: 48%;
+  border-top: 1px solid #e6e6e6;
+}
+.address__info-table {
+  margin-top: 15px;
+  width: 100%;
+}
+.address__info-table td {
+  padding: 15px 0;
+}
+.address__info-link {
+  text-align: end;
+}
+.address__info-link a {
+  color: #24c5d9;
+  text-decoration: underline;
+  font-size: 1.17em;
 }
 
 /*# sourceMappingURL=style.css.map */
