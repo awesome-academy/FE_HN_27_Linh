@@ -52,8 +52,8 @@ block content
                     .other__blog-title
                         +titleDark("TIN TỨC & BLOG")
                     .other__blog-posts
-                        each val in blogListItems
-                            +blogListItem(val.image, val.name, val.author, val.describe)
+                        - for (var i = 0; i < 2; i++)
+                            +blogListItem(blogListItems[i].image, blogListItems[i].name, blogListItems[i].author, blogListItems[i].describe)
                 .other__customer 
                     .other__customer-title
                         +titleDark("KHÁCH HÀNG")
