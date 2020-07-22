@@ -13,7 +13,7 @@
 
 .menu
     background-color: black
-    padding: 10px 0
+    padding: $smSpace 0
     position: relative
     a 
         display: block
@@ -53,11 +53,11 @@
                 text-transform: uppercase
                 cursor: pointer
             &-item
-                padding-top: 10px
+                padding-top: $smSpace
                 color: black   
         &-image
             flex: 2
-            background: url("../../assets/blog/subMenuImage.png") center no-repeat
+            background: url("../assets/blog/subMenuImage.png") center no-repeat
             background-size: cover    
     &__mega:hover 
         .menu__submenu
@@ -65,7 +65,7 @@
             opacity: 1
 
 .content
-    background: url("../../assets/images/product.png") left top no-repeat, url("../../assets/images/product2.png") right top no-repeat
+    background: url("../assets/images/product.png") left top no-repeat, url("../assets/images/product2.png") right top no-repeat
     background-size: 20%, 12%
     .container
         .intro
@@ -95,7 +95,7 @@
                     flex: 7
                     h2 
                         font-weight: normal
-                        margin-bottom: 5px
+                        margin-bottom: $xsSpace
                     &-price
                         +price(2.5rem, 1.5rem, $PrimaryColor)
                         padding: 25px 0
@@ -148,12 +148,12 @@
                                 flex: 2
                                 display: block
                                 color: white
-                                padding: 5px 0
+                                padding: $xsSpace 0
                                 text-align: center
                                 &:hover 
                                     color: $PrimaryColor
                                 i 
-                                    margin-right: 10px
+                                    margin-right: $smSpace
                             a:last-child
                                 flex: 1
                             a:nth-child(2)
@@ -169,12 +169,12 @@
                         &-name
                             text-transform: uppercase
                         &-price
-                            padding: 10px 0 20px 0
+                            padding: $smSpace 0 20px 0
                             display: flex
                             justify-content: center
                             align-items: flex-end
                             &>span
-                                margin: 0 5px
+                                margin: 0 $xsSpace
                                 color: $SecondaryColor
                             .newprice
                                 +price(1.2rem, 0.8rem, $PrimaryColor)
@@ -201,12 +201,12 @@
                         img
                             margin-bottom: 15px
                         h3 
-                            margin-bottom: 5px
+                            margin-bottom: $xsSpace
                         small
                             color: #cacaca
                         p 
                             color: $SecondaryColor
-                            padding: 5px 0
+                            padding: $xsSpace 0
             &__customer
                 flex: 1
                 text-align: center

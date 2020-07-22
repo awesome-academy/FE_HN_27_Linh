@@ -339,7 +339,7 @@ footer .end {
 }
 
 .slide {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/slide-1-2050x898.jpg") bottom no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/slide-1-2050x898.jpg") bottom no-repeat;
   background-size: cover;
   width: 100%;
   height: 667px;
@@ -349,11 +349,11 @@ footer .end {
 }
 @keyframes slide {
   50% {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/slide-2.jpg") bottom no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/slide-2.jpg") bottom no-repeat;
     background-size: cover;
   }
   100% {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/slide-3.jpg") bottom no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/slide-3.jpg") bottom no-repeat;
     background-size: cover;
   }
 }
@@ -414,7 +414,7 @@ footer .end {
 }
 .menu__submenu-image {
   flex: 2;
-  background: url("../../assets/blog/subMenuImage.png") center no-repeat;
+  background: url("../assets/blog/subMenuImage.png") center no-repeat;
   background-size: cover;
 }
 .menu__mega:hover .menu__submenu {
@@ -423,7 +423,7 @@ footer .end {
 }
 
 .content {
-  background: url("../../assets/images/product.png") left top no-repeat, url("../../assets/images/product2.png") right top no-repeat;
+  background: url("../assets/images/product.png") left top no-repeat, url("../assets/images/product2.png") right top no-repeat;
   background-size: 20%, 12%;
 }
 .content .container .intro {

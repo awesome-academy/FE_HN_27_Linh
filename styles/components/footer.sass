@@ -6,12 +6,12 @@ footer
             display: flex
         h2 
             @extend .introText
-            margin-bottom: 15px
+            margin-bottom: $mdSpace
         &__about
             flex: 1
             text-transform: uppercase
             li 
-                margin-bottom: 5px
+                margin-bottom: $xsSpace
                 a 
                     color: $SecondaryColor
         &__email
@@ -24,7 +24,7 @@ footer
             form 
                 display: flex
                 input
-                    padding: 5px 15px 5px 17px
+                    padding: $xsSpace $mdSpace $xsSpace 17px
                     border: 1px solid #787878
                     width: 60%
                     &::placeholder
@@ -36,21 +36,21 @@ footer
                     &:hover
                         ~.triangle
                             border-top: 14px solid transparent
-                            border-left: 15px solid $PrimaryColor
+                            border-left: $mdSpace solid $PrimaryColor
                             border-bottom: 14px solid transparent
                             transition: 0.5s
                 .triangle
                     border-top: 14px solid transparent
-                    border-left: 15px solid black
+                    border-left: $mdSpace solid black
                     border-bottom: 14px solid transparent
                     &:hover 
                         ~button
                             background-color: $PrimaryColor
             &-social
-                margin-bottom: 5px
+                margin-bottom: $xsSpace
                 a
                     color: $SecondaryColor
-                    margin-right: 15px
+                    margin-right: $mdSpace
                     transition: 0.5s
                     &:hover
                         color: $PrimaryColor
@@ -60,12 +60,12 @@ footer
             flex-direction: column
             justify-content: space-between
             i
-                margin-right: 10px
+                margin-right: $smSpace
             &-address
                 div 
                     display: flex
             &-phone
-                margin-bottom: 5px
+                margin-bottom: $xsSpace
                 span 
                     margin-right: 20px
                     i 
@@ -76,4 +76,4 @@ footer
         justify-content: space-between
         align-items: center
         color: $SecondaryColor
-        padding: 15px 0
+        padding: $mdSpace 0

@@ -1,4 +1,4 @@
-@import 'mixins'
+@import 'mixins', 'variables'
 
 +fontFaceGenerator(lobster-regular, Lobster-Regular)
 +fontFaceGenerator(roboto-regular, Roboto-Regular)
@@ -6,15 +6,6 @@
 +fontFaceGenerator(utm-aquarelle, UTM-Aquarelle)
 +fontFaceGenerator(utm-caviar, UTM-Caviar)
 +fontFaceGenerator(uvf-didot, UVF-Didot)
-    
-$PrimaryColor: #e6ae48
-$SecondaryColor: #818181
-$NewColor: #62af26
-$HotColor: #ed301c
-$lgWidth: 100%
-$mdWidth: 80%
-$smWidth: 50%
-$xsWidth: 25% 
     
 *
     margin: 0
@@ -52,7 +43,7 @@ input
         transition: 0.5s
 
 .titleDark
-    margin: 5px 0 20px 0
+    margin: $xsSpace 0 20px 0
 
 .endContent
     padding-bottom: 6rem
