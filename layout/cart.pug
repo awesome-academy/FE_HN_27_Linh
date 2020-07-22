@@ -1,0 +1,13 @@
+extends layout.pug
+block title 
+    title Giỏ hàng
+block content
+    .container
+        .cart 
+            +breadcrumb(["Trang chủ", "Sản phẩm", "Giỏ hàng"])
+            +titleLeft("GIỎ HÀNG", "big")
+            table.cart__table 
+                +cartTable(shoppingCart)
+            .cart__buttons 
+                each val in ["TIẾP TỤC MUA HÀNG", "XÓA", "CẬP NHẬT"]
+                    button.btn=val
