@@ -7,6 +7,10 @@
         font-family: "#{$family}"
         src: url("../assets/fonts/#{$font}.ttf")
 
+=flexDisplay($justify)
+    display: flex
+    justify-content: $justify
+
 =price($pricefontsize, $spanfontsize, $color)
     font-family: utm-caviar
     font-size: $pricefontsize
@@ -50,3 +54,28 @@
         width: 20rem
         height: 1px
         background-color: $color
+
+=createSolidBorder($width, $color)
+    border: $width solid $color
+
+=socialButton($iconColor, $textColor, $bgColor, $borderColor)
+    button
+        padding: $xsSpace
+        color: $textColor
+        background-color: $bgColor
+        +createSolidBorder(1px, $borderColor)
+        border-radius: 3px
+        i 
+            color: $iconColor
+            margin-right: $xsSpace
+
+=itemTag ($color)
+    display: block
+    float: left
+    padding: $xsSpace
+    +createSolidBorder(1px, $SecondaryColor)
+    margin: 0 $smSpace $smSpace 0
+    &:hover
+        background-color: $color
+        color: white !important
+        border-color: $color
