@@ -14,11 +14,11 @@
 
 body
     font-size: 14px
-    font-family: 'Times New Roman', Times, serif
+    @extend .timesFont
 
 a 
     text-decoration: none
-    font-family: 'Times New Roman', Times, serif
+    @extend .timesFont
     color: $SecondaryColor
     &:hover
         color: $PrimaryColor !important
@@ -30,6 +30,10 @@ ul
 input
     outline: none
 
+button
+    outline: none
+    cursor: pointer
+
 .introText
     text-transform: uppercase
     font-weight: normal
@@ -40,18 +44,21 @@ input
     background-color: black
     padding: 6px 18px
     border: none
-    outline: none
-    cursor: pointer
-    font-family: 'Times New Roman', Times, serif
+    @extend .timesFont
     &:hover 
         background-color: $PrimaryColor 
         transition: 0.5s
 
 .titleDark
-    margin: $xsSpace 0 20px 0
+    text-align: center
+    &__img
+        margin: $xsSpace 0 20px 0
 
 .endContent
     padding-bottom: 6rem
+
+.timesFont
+    font-family: "Times New Roman", Times, serif
 
 @each $tag, $color in ("sale": $PrimaryColor, "new": $NewColor, "hot": $HotColor)
     .saletag-small--#{$tag}
@@ -71,5 +78,67 @@ input
         display: none
     &__item:nth-last-child(2)
         color: $PrimaryColor 
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+
+.rowProductList
+    margin-top: 30px
+    display: flex
+    justify-content: space-between
+    &__item
+        flex-basis: $xsWidth
+        &-img
+            width: $lgWidth
+            padding-bottom: 100%
+            margin-bottom: 20px
+            position: relative
+            cursor: pointer
+            overflow: hidden
+            &-buttons
+                position: absolute
+                width: 100%
+                bottom: 0
+                background-color: black
+                visibility: hidden
+                opacity: 0
+                transition: opacity 0.5s, visibility 0.5s
+                display: flex
+                justify-content: space-between
+                a
+                    flex: 2
+                    display: block
+                    color: white
+                    padding: $xsSpace 0
+                    text-align: center
+                    i
+                        margin-right: $smSpace
+                a:last-child
+                    flex: 1
+                a:nth-child(2)
+                    border-right: 2px solid #262626
+                    border-left: 2px solid #262626
+            &:hover
+                .rowProductList__item-img-buttons
+                    visibility: visible
+                    opacity: 1
+        &-detail
+            text-align: center
+            &-name
+                text-transform: uppercase
+                color: black
+            &-price
+                padding: $smSpace 0 20px 0
+                display: flex
+                justify-content: center
+                align-items: flex-end
+                &>span
+                    margin: 0 $xsSpace
+                    color: $SecondaryColor
+                .newprice
+                    +price(1.2rem, 0.8rem, $PrimaryColor)
+                .oldprice
+                    +price(0.8rem, 0.5rem, $SecondaryColor)
+                    text-decoration: line-through
 
 @import 'components/header', 'components/footer', 'pages/home', 'pages/detail'

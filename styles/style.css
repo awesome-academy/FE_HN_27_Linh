@@ -31,12 +31,10 @@
 
 body {
   font-size: 14px;
-  font-family: "Times New Roman", Times, serif;
 }
 
 a {
   text-decoration: none;
-  font-family: "Times New Roman", Times, serif;
   color: #818181;
 }
 a:hover {
@@ -52,6 +50,11 @@ input {
   outline: none;
 }
 
+button {
+  outline: none;
+  cursor: pointer;
+}
+
 .introText, footer .info h2 {
   text-transform: uppercase;
   font-weight: normal;
@@ -63,9 +66,6 @@ input {
   background-color: black;
   padding: 6px 18px;
   border: none;
-  outline: none;
-  cursor: pointer;
-  font-family: "Times New Roman", Times, serif;
 }
 .btn:hover, footer .info__email form button:hover {
   background-color: #e6ae48;
@@ -73,11 +73,18 @@ input {
 }
 
 .titleDark {
+  text-align: center;
+}
+.titleDark__img {
   margin: 5px 0 20px 0;
 }
 
-.endContent, .pdDetail .detail__img, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
+.endContent, .pdDetail .product, .pdDetail .more, .pdDetail .detail, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
   padding-bottom: 6rem;
+}
+
+.timesFont, .pdDetail .more .tabs__buttons-btn, .pdDetail .detail__describe-buy-size select, body, a, .btn, footer .info__email form button {
+  font-family: "Times New Roman", Times, serif;
 }
 
 .saletag-small--sale {
@@ -216,6 +223,95 @@ input {
 }
 .breadcrumb__item:nth-last-child(2) {
   color: #e6ae48;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.rowProductList {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.rowProductList__item {
+  flex-basis: 25%;
+}
+.rowProductList__item-img {
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.rowProductList__item-img-buttons {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+  display: flex;
+  justify-content: space-between;
+}
+.rowProductList__item-img-buttons a {
+  flex: 2;
+  display: block;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+}
+.rowProductList__item-img-buttons a i {
+  margin-right: 10px;
+}
+.rowProductList__item-img-buttons a:last-child {
+  flex: 1;
+}
+.rowProductList__item-img-buttons a:nth-child(2) {
+  border-right: 2px solid #262626;
+  border-left: 2px solid #262626;
+}
+.rowProductList__item-img:hover .rowProductList__item-img-buttons {
+  visibility: visible;
+  opacity: 1;
+}
+.rowProductList__item-detail {
+  text-align: center;
+}
+.rowProductList__item-detail-name {
+  text-transform: uppercase;
+  color: black;
+}
+.rowProductList__item-detail-price {
+  padding: 10px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.rowProductList__item-detail-price > span {
+  margin: 0 5px;
+  color: #818181;
+}
+.rowProductList__item-detail-price .newprice {
+  font-family: utm-caviar;
+  font-size: 1.2rem;
+  color: #e6ae48;
+}
+.rowProductList__item-detail-price .newprice span {
+  font-size: 0.8rem;
+  vertical-align: top;
+}
+.rowProductList__item-detail-price .oldprice {
+  font-family: utm-caviar;
+  font-size: 0.8rem;
+  color: #818181;
+  text-decoration: line-through;
+}
+.rowProductList__item-detail-price .oldprice span {
+  font-size: 0.5rem;
+  vertical-align: top;
 }
 
 header {
@@ -509,92 +605,6 @@ footer .end {
 .home .container .sale__product-detail-time div p {
   text-transform: uppercase;
 }
-.home .container .new__title {
-  text-align: center;
-}
-.home .container .new__product {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.home .container .new__product-item {
-  flex-basis: 25%;
-}
-.home .container .new__product-item-img {
-  width: 100%;
-  padding-bottom: 100%;
-  margin-bottom: 20px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-}
-.home .container .new__product-item-img-buttons {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  background-color: black;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s, visibility 0.5s;
-  display: flex;
-  justify-content: space-between;
-}
-.home .container .new__product-item-img-buttons a {
-  flex: 2;
-  display: block;
-  color: white;
-  padding: 5px 0;
-  text-align: center;
-}
-.home .container .new__product-item-img-buttons a i {
-  margin-right: 10px;
-}
-.home .container .new__product-item-img-buttons a:last-child {
-  flex: 1;
-}
-.home .container .new__product-item-img-buttons a:nth-child(2) {
-  border-right: 2px solid #262626;
-  border-left: 2px solid #262626;
-}
-.home .container .new__product-item-img:hover .new__product-item-img-buttons {
-  visibility: visible;
-  opacity: 1;
-}
-.home .container .new__product-item-detail {
-  text-align: center;
-}
-.home .container .new__product-item-detail-name {
-  text-transform: uppercase;
-}
-.home .container .new__product-item-detail-price {
-  padding: 10px 0 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.home .container .new__product-item-detail-price > span {
-  margin: 0 5px;
-  color: #818181;
-}
-.home .container .new__product-item-detail-price .newprice {
-  font-family: utm-caviar;
-  font-size: 1.2rem;
-  color: #e6ae48;
-}
-.home .container .new__product-item-detail-price .newprice span {
-  font-size: 0.8rem;
-  vertical-align: top;
-}
-.home .container .new__product-item-detail-price .oldprice {
-  font-family: utm-caviar;
-  font-size: 0.8rem;
-  color: #818181;
-  text-decoration: line-through;
-}
-.home .container .new__product-item-detail-price .oldprice span {
-  font-size: 0.5rem;
-  vertical-align: top;
-}
 .home .container .other {
   display: flex;
 }
@@ -604,9 +614,6 @@ footer .end {
 .home .container .other__blog {
   flex: 2;
   margin-right: 2%;
-}
-.home .container .other__blog-title {
-  text-align: center;
 }
 .home .container .other__blog-posts {
   display: flex;
@@ -738,6 +745,13 @@ footer .end {
 .pdDetail .detail__describe {
   flex: 2;
 }
+.pdDetail .detail__describe label {
+  color: #818181;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
 .pdDetail .detail__describe h1 {
   font-weight: normal;
   margin-bottom: 5px;
@@ -776,13 +790,6 @@ footer .end {
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
 }
-.pdDetail .detail__describe-buy label {
-  color: #818181;
-  text-transform: uppercase;
-  display: block;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
 .pdDetail .detail__describe-buy-color {
   margin-bottom: 1rem;
 }
@@ -820,11 +827,166 @@ footer .end {
 }
 .pdDetail .detail__describe-buy-size select {
   padding: 5px 10px;
-  font-family: "Times New Roman", Times, serif;
   outline: none;
   color: #818181;
   border-color: #818181;
   font-size: 1.1rem;
+}
+.pdDetail .detail__describe-buy-quantity {
+  margin-bottom: 1rem;
+}
+.pdDetail .detail__describe-buy-quantity-form {
+  display: flex;
+}
+.pdDetail .detail__describe-buy-quantity-form > div {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  background-color: #e6e6e6;
+}
+.pdDetail .detail__describe-buy-quantity-form > div * {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: #737373;
+}
+.pdDetail .detail__describe-buy-quantity-form > div button {
+  font-size: 1.2rem;
+  height: 100%;
+  width: 30px;
+  background-color: transparent;
+}
+.pdDetail .detail__describe-buy-quantity-form > div input {
+  height: 70%;
+  text-align: center;
+  width: 70px;
+}
+.pdDetail .detail__describe-buy-quantity-form > button {
+  padding: 10px 18px;
+}
+.pdDetail .detail__describe-buttons {
+  margin: 2rem 0 1rem;
+}
+.pdDetail .detail__describe-buttons a {
+  margin-right: 15px;
+}
+.pdDetail .detail__describe-buttons i {
+  margin-right: 10px;
+}
+.pdDetail .detail__describe-content {
+  margin-bottom: 1rem;
+}
+.pdDetail .detail__describe-content p {
+  color: #818181;
+}
+.pdDetail .detail__describe-social {
+  display: flex;
+  justify-content: space-between;
+}
+.pdDetail .detail__describe-social div > span {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: 1px solid #818181;
+}
+.pdDetail .detail__describe-social--facebook button {
+  padding: 5px;
+  color: white;
+  background-color: #4965b5;
+  border: 1px solid #4965b5;
+  border-radius: 3px;
+}
+.pdDetail .detail__describe-social--facebook button i {
+  color: white;
+  margin-right: 5px;
+}
+.pdDetail .detail__describe-social--twitter button {
+  padding: 5px;
+  color: #818181;
+  background-color: white;
+  border: 1px solid #818181;
+  border-radius: 3px;
+}
+.pdDetail .detail__describe-social--twitter button i {
+  color: #00acee;
+  margin-right: 5px;
+}
+.pdDetail .detail__describe-social--google button {
+  padding: 5px;
+  color: #e88476;
+  background-color: white;
+  border: 1px solid #818181;
+  border-radius: 3px;
+}
+.pdDetail .detail__describe-social--google button i {
+  color: #e88476;
+  margin-right: 5px;
+}
+.pdDetail .detail__describe-social--linkedin button {
+  padding: 5px;
+  color: white;
+  background-color: #0077b5;
+  border: 1px solid #0077b5;
+  border-radius: 3px;
+}
+.pdDetail .detail__describe-social--linkedin button i {
+  color: white;
+  margin-right: 5px;
+}
+.pdDetail .detail__describe-social--linkedin > span {
+  display: none;
+}
+.pdDetail .detail__describe-social--pinterest button {
+  padding: 5px;
+  color: #be1d2b;
+  background-color: white;
+  border: 1px solid #818181;
+  border-radius: 3px;
+}
+.pdDetail .detail__describe-social--pinterest button i {
+  color: #be1d2b;
+  margin-right: 5px;
+}
+.pdDetail .detail__describe-social--pinterest > span {
+  display: none;
+}
+.pdDetail .more {
+  display: flex;
+  justify-content: space-between;
+}
+.pdDetail .more .tabs {
+  flex-basis: 60%;
+}
+.pdDetail .more .tabs__buttons {
+  margin-bottom: 1rem;
+}
+.pdDetail .more .tabs__buttons-btn {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: #818181;
+}
+.pdDetail .more .tabs__buttons-btn:hover, .pdDetail .more .tabs__buttons-btn--active {
+  color: white;
+  background-color: #e6ae48;
+}
+.pdDetail .more .tabs__content {
+  text-indent: 15px;
+}
+.pdDetail .more .img {
+  flex-basis: 30%;
+  background: url("../assets/blog/subMenuImage.png") center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.pdDetail .more .img h1 {
+  width: 100%;
+  font-weight: normal;
+  color: white;
+  font-family: "roboto";
 }
 
 /*# sourceMappingURL=style.css.map */

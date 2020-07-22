@@ -35,8 +35,7 @@ block content
                                     p=val.text
             .new
                 .new__title
-                    h2.introText SẢN PHẨM MỚI
-                    img.titleDark(src="assets/images/title-dark.png")
+                    +titleDark("Sản phẩm mới")
                 .new__product
                     +productListItem (newProducts)
 

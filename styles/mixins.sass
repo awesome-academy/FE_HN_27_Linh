@@ -53,3 +53,14 @@
 
 =createSolidBorder($width, $color)
     border: $width solid $color
+
+=socialButton($iconColor, $textColor, $bgColor, $borderColor)
+    button
+        padding: $xsSpace
+        color: $textColor
+        background-color: $bgColor
+        +createSolidBorder(1px, $borderColor)
+        border-radius: 3px
+        i 
+            color: $iconColor
+            margin-right: $xsSpace
