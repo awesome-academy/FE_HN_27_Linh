@@ -84,7 +84,7 @@ button {
   margin-bottom: 5px;
 }
 
-.endContent, .blogDetail, .blog, .about, .cart, .pdList .wrapper, .pdList .slide, .pdDetail .product, .pdDetail .more, .pdDetail .detail, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
+.endContent, .login, .blogDetail, .blog, .about, .cart, .pdList .wrapper, .pdList .slide, .pdDetail .product, .pdDetail .more, .pdDetail .detail, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
   margin-bottom: 6rem;
 }
 
@@ -366,6 +366,12 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background: url("../assets/images/product.png") left top no-repeat, url("../assets/images/product2.png") right top no-repeat;
   background-size: 20%, 12%;
 }
+.home .container .intro {
+  padding-top: 5rem;
+  width: 70%;
+  margin: 0 auto 6rem auto;
+  text-align: center;
+}
 
 .blogListItem__title {
   color: black;
@@ -398,6 +404,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .textInput label, .textArea label {
   width: 10%;
 }
+.textInput label span, .textArea label span {
+  margin-left: 5px;
+}
 .textInput input, .textInput textarea, .textArea input, .textArea textarea {
   border: 1px solid #e6e6e6;
   width: 90%;
@@ -428,6 +437,26 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 .blogComment__head-reply {
   text-decoration: underline;
+}
+
+.customCheckbox {
+  position: relative;
+  visibility: hidden;
+}
+.customCheckbox::after {
+  visibility: visible;
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  transform: translateY(30%);
+  background-color: #e6e6e6;
+  border: 1px solid #818181;
+}
+.customCheckbox:checked::after {
+  background-color: #e6ae48;
 }
 
 header {
@@ -722,7 +751,6 @@ footer .end {
 .home .container .other__customer-detail {
   height: 83%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
@@ -1069,7 +1097,10 @@ footer .end {
 }
 .pdList .wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 .pdList .wrapper__sidebar {
   flex-basis: 24%;
@@ -1171,7 +1202,7 @@ footer .end {
 }
 .cart__table-price {
   font-family: utm-caviar;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   color: #e6ae48;
 }
 .cart__table-price span {
@@ -1314,7 +1345,6 @@ footer .end {
 }
 .blogDetail .wrapper__post-contact span {
   color: red;
-  margin-left: 5px;
 }
 .blogDetail .wrapper__post-contact button {
   margin-left: 10%;
@@ -1342,6 +1372,36 @@ footer .end {
 .blogDetail .wrapper__post-comment-pages--active {
   background-color: #737373;
   color: white;
+}
+
+.login__head {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.login__head button {
+  padding: 6px 50px;
+}
+.login__form {
+  padding: 50px;
+  border: 1px solid #e6e6e6;
+}
+.login__form-title h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+.login__form-input {
+  margin-top: 3rem;
+}
+.login__form-submit {
+  margin-left: 10%;
+}
+.login__form-submit > div {
+  margin: 1.5rem 0;
+}
+.login__form-submit > div input {
+  background-color: #818181;
 }
 
 /*# sourceMappingURL=style.css.map */
