@@ -151,3 +151,19 @@ mixin blogComment (data)
             a.blogComment__head-reply(href="#") Trả lời 
         .blogComment__body 
             p=data.content
+
+mixin orderTable (data) 
+    tr 
+        each val in ["stt", "mã hóa đơn/ngày mua hàng", "kho nhận hàng", "số sp", "tổng tiền", "tình trạng", "thao tác"]
+            th=val
+    - for (var i = 1; i < 8; i++) 
+        tr 
+            td.order__list-body-code-number="0"+i
+            td.order__list-body-code
+                p=data.code 
+                small=data.time 
+            td.order__list-body-code-place=data.place 
+            td.order__list-body-code-quantity=data.quantity 
+            td.order__list-body-code-total=data.total 
+            td.order__list-body-code-status=data.status
+            td.order__list-body-code-link: a(href="#") Chi tiết
