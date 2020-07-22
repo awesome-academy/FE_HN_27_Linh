@@ -33,19 +33,49 @@ mixin productListItem (data)
                             span đ
                     button.btn ADD TO CART
 
-    mixin galleryItem (data)
+mixin productListItemColumn (data)
+    .columnProductList 
         - for (var i = 0; i < data.length; i++)
-            a(href="#").gallery__img(
-                style="background: url(assets/gallery/" + data[i] + ".png) no-repeat center; background-size: cover"
-            )
-                .gallery__img-content
-                    p 1987
-                    h3 RƯỢU
+            .columnProductList__item 
+                .columnProductList__item-img
+                    img(src="assets/product/"+data[i]+".jpg")
+                .columnProductList__item-describe 
+                    h1.columnProductList__item-describe-title RƯỢU NHO NĂM 1987
+                    .columnProductList__item-describe-price
+                        p.newprice 350.000
+                            span đ
+                    .columnProductList__item-describe-content 
+                        p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+                    .columnProductList__item-describe-buttons 
+                        button.btn ADD TO CART
+                        a(href="#")
+                            i.fas.fa-heart
+                            | Yêu thích
+                        a(href="#")
+                            i.fas.fa-signal
+                            | So sánh 
+
+mixin galleryItem (data)
+    - for (var i = 0; i < data.length; i++)
+        a(href="#").gallery__img(
+            style="background: url(assets/gallery/" + data[i] + ".png) no-repeat center; background-size: cover"
+        )
+            .gallery__img-content
+                p 1987
+                h3 RƯỢU
 
 mixin titleDark (text)
     .titleDark
         h2.introText=text
         img.titleDark__img(src="assets/images/title-dark.png")
+
+mixin titleLeft (text, size)
+    .titleLeft
+        if size == "big"
+            h1=text
+        else 
+            h2=text
+        img(src="assets/images/titleleft-dark.png")
 
 mixin blogListItem (image, name, author, describe)
     .other__blog-posts-item
@@ -60,3 +90,14 @@ mixin breadcrumb (links)
         - for (var i = 0; i < links.length; i++) 
             a.breadcrumb__item(href="#")=links[i] 
             span /
+
+mixin productListSideBar (data)
+    - for (var i = 0; i < data.length; i++)
+        if data[i].quantity == " "
+            li: a.wrapper__sidebar-products--head(href="#")=data[i].name 
+        else
+            li: a(href="#")=data[i].name+" ("+data[i].quantity+")"
+
+mixin productTags (data)
+    - for (var i = 0; i < data.length; i++)
+        a(href="#")=data[i]
