@@ -1,30 +1,15 @@
 extends layout.pug
 block title 
     title Trang chủ
-block content
-    .slide 
+block headMenu 
+    .headMenu.headMenu--dark 
+        include components/headMenu.pug
+block slide
+    .slide
         .container
             img(src="assets/images/slideText.png")
-    .menu
-        .container 
-            .menu__logo 
-                img(src="assets/images/menuLogo.png")
-            .menu__list
-                each val in menuItems
-                    if val === "Rượu vang bò"
-                        .menu__mega
-                            a.menu__list-item(href="#")=val
-                            .menu__submenu 
-                                - for (var i = 0; i < 3; i++)
-                                    .menu__submenu-list
-                                        a.menu__submenu-list-title: h3 Rượu ngoại 
-                                        each val in submenuItmes
-                                            a.menu__submenu-list-item(href="#")=val
-                                .menu__submenu-image
-                    else
-                        a.menu__list-item(href="#")=val
-
-    .content
+block content
+    .home
         .container
             .intro
                 +titleDark("GIỚI THIỆU")
@@ -37,8 +22,7 @@ block content
                         p.saletag-big--sale Sale 
                         img(src="assets/product/14.jpg" width=190)
                     .sale__product-detail 
-                        h2 RƯỢU NHO NĂM 1987
-                        img(src="assets/images/titleleft-dark.png")
+                        +titleLeft("RƯỢU NHO NĂM 1987")
                         .sale__product-detail-price 330.000
                             span đ
                         button.btn ADD TO CART
@@ -50,8 +34,7 @@ block content
                                     p=val.text
             .new
                 .new__title
-                    h2.introText SẢN PHẨM MỚI
-                    img.titleDark(src="assets/images/title-dark.png")
+                    +titleDark("Sản phẩm mới")
                 .new__product
                     +productListItem (newProducts)
 
@@ -76,7 +59,7 @@ block content
                         +titleDark("KHÁCH HÀNG")
                     .other__customer-detail 
                         img(src="assets/blog/elipse.png" width="65")
-                        div
+                        .other__customer-detail-comment
                             p Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
                             a(href="#") Read more
                         img(src="assets/blog/customer.png" width="100")
@@ -86,5 +69,3 @@ block content
                         .other__customer-detail-buttons 
                             - for (var i = 0; i < 3; i++)
                                 a(href="#"): i.fas.fa-circle
-            .brand
-                img(src="assets/blog/brand.png" width="100%")
