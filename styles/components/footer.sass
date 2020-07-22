@@ -2,6 +2,9 @@ footer
     .info
         padding-bottom: 35px
         border-bottom: 1px solid #e7e7e7
+        &__brand
+            width: 70%
+            margin: 0 auto 50px auto
         .container
             display: flex
         h2 
@@ -12,20 +15,17 @@ footer
             text-transform: uppercase
             li 
                 margin-bottom: $xsSpace
-                a 
-                    color: $SecondaryColor
         &__email
             flex: 2
-            display: flex 
+            +flexDisplay(space-between)
             flex-direction: column
-            justify-content: space-between
             p
                 color: $SecondaryColor
             form 
                 display: flex
                 input
                     padding: $xsSpace $mdSpace $xsSpace 17px
-                    border: 1px solid #787878
+                    +createSolidBorder(1px, #787878)
                     width: 60%
                     &::placeholder
                         font-style: italic
@@ -49,16 +49,11 @@ footer
             &-social
                 margin-bottom: $xsSpace
                 a
-                    color: $SecondaryColor
                     margin-right: $mdSpace
-                    transition: 0.5s
-                    &:hover
-                        color: $PrimaryColor
         &__contact
             flex: 2
-            display: flex 
+            +flexDisplay(space-between)
             flex-direction: column
-            justify-content: space-between
             i
                 margin-right: $smSpace
             &-address
@@ -72,8 +67,7 @@ footer
                         color: $PrimaryColor
                         text-transform: uppercase
     .end
-        display: flex
-        justify-content: space-between
+        +flexDisplay(space-between)
         align-items: center
         color: $SecondaryColor
         padding: $mdSpace 0
