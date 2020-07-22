@@ -57,9 +57,7 @@ mixin productListItemColumn (data)
 
 mixin galleryItem (data)
     - for (var i = 0; i < data.length; i++)
-        a(href="#").gallery__img(
-            style="background: url(assets/gallery/" + data[i] + ".png) no-repeat center; background-size: cover" 
-        )
+        a(href="#" style="background: url(assets/gallery/" + data[i] + ".png) no-repeat center; background-size: cover" ).gallery__img
             .gallery__img-content
                 p 1987
                 h3 RƯỢU
