@@ -89,8 +89,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .rowProductList
     margin-top: 30px
-    display: flex
-    justify-content: space-between
+    +flexDisplay(space-between)
     &__item
         flex-basis: $xsWidth
         &-img
@@ -108,8 +107,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
                 visibility: hidden
                 opacity: 0
                 transition: opacity 0.5s, visibility 0.5s
-                display: flex
-                justify-content: space-between
+                +flexDisplay(space-between)
                 a
                     flex: 2
                     display: block
@@ -134,8 +132,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
                 color: black
             &-price
                 padding: $smSpace 0 20px 0
-                display: flex
-                justify-content: center
+                +flexDisplay(center)
                 align-items: flex-end
                 &>span
                     margin: 0 $xsSpace
@@ -158,7 +155,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
             img 
                 width: 90%
         &-describe
-            flex-basis: 40%
+            flex-basis: 60%
             &-title 
                 font-weight: normal
             &-price
@@ -186,4 +183,70 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
         100%
             +slideBackground("slide-3")
 
-@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist'
+.blogListItem
+    &__title
+        color: black
+    img
+        margin-bottom: $mdSpace
+    h3 
+        cursor: pointer
+        margin-bottom: $xsSpace
+    small
+        color: #cacaca
+    p 
+        color: $SecondaryColor
+        padding: $xsSpace 0
+
+.clearfix
+     clear: both
+
+.textInput, .textArea
+    width: 100%
+    +flexDisplay(space-between)
+    margin-top: 1.5rem
+    label
+        width: 10%
+        span
+            margin-left: $xsSpace
+    input, textarea
+        +createSolidBorder(1px, $BorderColor)
+        width: 90%
+        padding: $smSpace
+
+.blogComment
+    margin-top: 1.5rem
+    & > *
+        color: $SecondaryColor
+        padding: $mdSpace 25px
+    &__head
+        +flexDisplay(space-between)
+        background-color: $BorderColor
+        border-radius: 5px
+        font-style: italic
+        &-more
+            display: flex
+            &-author 
+                padding-right: 20px
+                margin-right: $mdSpace
+                border-right: 1px solid $SecondaryColor
+        &-reply 
+            text-decoration: underline
+
+.customCheckbox 
+    position: relative
+    visibility: hidden
+    &::after
+        visibility: visible
+        content: ""
+        position: absolute
+        width: 60%
+        height: 60%
+        top: 0
+        left: 0
+        transform: translateY(40%)
+        background-color: $BorderColor
+        +createSolidBorder(1px, $SecondaryColor)
+    &:checked::after
+        background-color: $PrimaryColor
+
+@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist', 'pages/cart', 'pages/about', 'pages/blog', 'pages/blogDetail', 'pages/login', 'pages/signup', 'pages/order', 'pages/address', 'pages/contact', 'pages/404page'

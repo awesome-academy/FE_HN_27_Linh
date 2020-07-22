@@ -17,9 +17,8 @@ footer
                 margin-bottom: $xsSpace
         &__email
             flex: 2
-            display: flex 
+            +flexDisplay(space-between)
             flex-direction: column
-            justify-content: space-between
             p
                 color: $SecondaryColor
             form 
@@ -53,9 +52,8 @@ footer
                     margin-right: $mdSpace
         &__contact
             flex: 2
-            display: flex 
+            +flexDisplay(space-between)
             flex-direction: column
-            justify-content: space-between
             i
                 margin-right: $smSpace
             &-address
@@ -69,8 +67,7 @@ footer
                         color: $PrimaryColor
                         text-transform: uppercase
     .end
-        display: flex
-        justify-content: space-between
+        +flexDisplay(space-between)
         align-items: center
         color: $SecondaryColor
         padding: $mdSpace 0

@@ -2,10 +2,9 @@ header
     position: relative
     .headMenu
         width: $lgWidth
-        padding: 15px 0
+        padding: $mdSpace 0
         .container
-            display: flex
-            justify-content: space-between
+            +flexDisplay(space-between)
         a 
             &:hover 
                 border-bottom: 1px solid $PrimaryColor
@@ -42,16 +41,14 @@ header
 
     .menu
         background-color: black
-        padding: 10px 0
+        padding: $smSpace 0
         position: relative
         .container
-            display: flex 
-            justify-content: space-between
+            +flexDisplay(space-between)
             align-items: center
         &__list
             flex-basis: $mdWidth
-            display: flex
-            justify-content: space-between
+            +flexDisplay(space-between)
             &-item 
                 font-size: 1.1rem
                 color: white
@@ -78,7 +75,7 @@ header
                     color: black
                 &-item
                     display: block
-                    padding-top: 10px
+                    padding-top: $smSpace
                     color: black   
             &-image
                 flex: 2
