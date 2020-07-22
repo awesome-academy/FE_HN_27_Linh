@@ -59,6 +59,7 @@ block content
                                 i(class=val.icon)
                                 span=val.content
                             span 0
+                .clearfix
         .more
             .tabs
                 .tabs__buttons 
@@ -72,4 +73,4 @@ block content
 
         .product 
             +titleDark("sản phẩm liên quan")
-            +productListItem (bestSellerProducts)
+            +productListItem (bestSellerProducts, true)

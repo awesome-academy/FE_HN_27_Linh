@@ -11,16 +11,17 @@ block content
                     .wrapper__sidebar-new
                         h2 bài viết mới nhất
                         +newBlogListItem(["blog1", "blog2", "blog3"])
-                    .wrapper__sidebar-tags
-                        h2 blog tags  
-                        .wrapper__sidebar-tags-items 
-                            +productTags(pdTags)
-                    .wrapper__sidebar-video
-                        h2 lastest video
-                        .wrapper__sidebar-video-item
-                            img(src="assets/blog/blogVideo.png" width="100%")
-                            a.wrapper__sidebar-video-item-button(href="#")
-                                i.fas.fa-play
+                    div
+                        .wrapper__sidebar-tags
+                            h2 blog tags  
+                            .wrapper__sidebar-tags-items 
+                                +productTags(pdTags)
+                        .wrapper__sidebar-video
+                            h2 lastest video
+                            .wrapper__sidebar-video-item
+                                img(src="assets/blog/blogVideo.png" width="100%")
+                                a.wrapper__sidebar-video-item-button(href="#")
+                                    i.fas.fa-play
                 .wrapper__post
                     .wrapper__post-blog
                         +blogListItem(blogDetailItem.image, blogDetailItem.name, blogDetailItem.author, blogDetailItem.describe)

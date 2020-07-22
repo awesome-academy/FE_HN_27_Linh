@@ -62,13 +62,15 @@
                         cursor: default
                     a:last-child 
                         display: none
+                    &__img:hover 
+                        .blogListItem__img-inner, i 
+                            opacity: 0
             &-contact 
                 margin-top: 3rem
                 label
                     font-style: italic
                 span 
                     color: red
-                    margin-left: $xsSpace
                 button 
                     margin-left: 10%
                     background-color: $BorderColor

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Giới thiệu</title>
+    <title>Đăng nhập</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
@@ -80,19 +80,40 @@
       </div>
     </header>
     <div class="container"> 
-      <div class="about"> 
-        <div class="breadcrumb"><a class="breadcrumb__item" href="#">Trang chủ</a><span>/</span><a class="breadcrumb__item" href="#">Giới thiệu</a><span>/</span>
+      <div class="login"> 
+        <div class="breadcrumb"><a class="breadcrumb__item" href="#">Trang chủ</a><span>/</span><a class="breadcrumb__item" href="#">Đăng nhập</a><span>/</span>
         </div>
-        <div class="titleLeft">
-          <h1>GIỚI THIỆU</h1><img src="assets/images/titleleft-dark.png"/>
-        </div>
-        <div class="about__content"> 
-          <div class="about__content-img"> <img src="assets/images/saleWine.jpg"></div>
-          <div class="about__content-des"> 
-            <h1 class="introText">chào mừng đến với wine hourse </h1>
-            <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p>
+        <div class="login__head"> 
+          <div class="titleLeft">
+            <h1>ĐĂNG NHẬP</h1><img src="assets/images/titleleft-dark.png"/>
           </div>
+          <button class="btn">ĐĂNG KÝ</button>
         </div>
+        <form class="login__form"> 
+          <div class="login__form-title">
+            <h2>khách hàng đăng nhập </h2>
+            <p>Nếu bạn có một tài khoản, xin vui lòng đăng nhập </p>
+          </div>
+          <div class="login__form-input">
+            <div class="textInput">
+              <label for="email">Email<span>* </span>
+              </label>
+              <input type="email" name="email"/>
+            </div>
+            <div class="textInput">
+              <label for="password">Password<span>* </span>
+              </label>
+              <input type="password" name="password"/>
+            </div>
+          </div>
+          <div class="login__form-submit">
+            <div>
+              <input class="customCheckbox" type="checkbox" name="forgetPW" value="true">
+              <label for="forgetPW">Quên mật khẩu</label>
+            </div>
+            <button class="btn">ĐĂNG NHẬP</button>
+          </div>
+        </form>
       </div>
     </div>
     <footer>
