@@ -1,0 +1,91 @@
+.pdList
+    .slide
+        height: 300px
+        @extend .endContent
+    .wrapper
+<<<<<<< HEAD
+<<<<<<< HEAD
+        +flexDisplay(space-between)
+        @extend .endContent
+        &__sidebar
+            flex-basis: 24%
+            +flexDisplay(space-between)
+            flex-direction: column
+=======
+=======
+>>>>>>> 34bc816... complete product list page
+        display: flex
+        justify-content: space-between
+        @extend .endContent
+        &__sidebar
+            flex-basis: 24%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+<<<<<<< HEAD
+>>>>>>> a25a07e... complete about and shopping cart page
+=======
+>>>>>>> 34bc816... complete product list page
+            .titleLeft
+                margin-bottom: $mdSpace
+            & > div
+                margin-bottom: 1.5rem
+            &-menu
+                &-products
+                    li 
+                        padding: 2px 0
+                    &--head
+                        text-transform: uppercase
+            &-compare
+                p 
+                    color: $SecondaryColor
+            &-tag
+                &-items
+                    a 
+                        display: block
+                        float: left
+                        padding: $xsSpace
+                        +createSolidBorder(1px, $SecondaryColor)
+                        margin: 0 $smSpace $smSpace 0
+                        &:hover 
+                            background-color: $PrimaryColor
+                            color: white !important
+                            border-color: $PrimaryColor
+            &-ad 
+                width: 100%
+                height: 35%
+                background: url("../assets/images/hiendi.png") center no-repeat
+                background-size: cover
+        &__products
+            flex-basis: 72%
+            &-headbar
+<<<<<<< HEAD
+<<<<<<< HEAD
+                +flexDisplay(space-between)
+=======
+                display: flex
+                justify-content: space-between
+>>>>>>> a25a07e... complete about and shopping cart page
+=======
+                display: flex
+                justify-content: space-between
+>>>>>>> 34bc816... complete product list page
+                font-size: 1.2rem
+                padding: $smSpace $mdSpace
+                +createSolidBorder(1px, $BorderColor)
+                a
+                    color: $BorderColor
+                a:hover, &--active
+                    color: $Orange !important
+                &-left
+                    a 
+                        margin-right: $smSpace
+                &-right 
+                    a 
+                        margin-left: $smSpace
+            .rowProductList
+                margin-top: 0
+                flex-wrap: wrap
+                .rowProductList__item
+                    flex-basis: 33.33%
+                    margin-bottom: 1.5rem
