@@ -1,15 +1,3 @@
-.slide 
-    +slideBackground("slide-1-2050x898")
-    width: 100%
-    height: 667px
-    animation: slide 15s infinite
-    display: flex
-    align-items: center
-    @keyframes slide
-        50%
-            +slideBackground("slide-2")
-        100%
-            +slideBackground("slide-3")
 .home
     background: url("../assets/images/product.png") left top no-repeat, url("../assets/images/product2.png") right top no-repeat
     background-size: 20%, 12%
@@ -17,7 +5,7 @@
         .intro
             padding-top: 5rem
             width: 70%
-            margin: auto
+            margin: 0 auto 6rem auto
             text-align: center
             @extend .endContent
             p 
