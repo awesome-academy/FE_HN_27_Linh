@@ -78,9 +78,9 @@ mixin titleLeft (text, size)
         img(src="assets/images/titleleft-dark.png")
 
 mixin blogListItem (image, name, author, describe)
-    .other__blog-posts-item
+    .blogListItem
         img(src="assets/blog/" + image + ".png" width="100%")
-        h3.introText=name
+        a.blogListItem__title: h3.introText=name
         small=author 
         p=describe
         a(href="#") Read more

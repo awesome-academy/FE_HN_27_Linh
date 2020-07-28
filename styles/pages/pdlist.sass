@@ -3,14 +3,12 @@
         height: 300px
         @extend .endContent
     .wrapper
-        display: flex
-        justify-content: space-between
+        +flexDisplay(space-between)
         @extend .endContent
         &__sidebar
             flex-basis: 24%
-            display: flex
+            +flexDisplay(space-between)
             flex-direction: column
-            justify-content: space-between
             .titleLeft
                 margin-bottom: $mdSpace
             & > div
@@ -44,8 +42,7 @@
         &__products
             flex-basis: 72%
             &-headbar
-                display: flex
-                justify-content: space-between
+                +flexDisplay(space-between)
                 font-size: 1.2rem
                 padding: $smSpace $mdSpace
                 +createSolidBorder(1px, $BorderColor)

@@ -61,7 +61,7 @@
                     span
                         position: relative
                         margin-right: $xsSpace
-                        &:hover:before, &:hover ~ span:before 
+                        &:hover::before, &:hover ~ span::before 
                             content: "\f005"
                             position: absolute
                             color: #737373
@@ -139,8 +139,7 @@
                 p 
                     color: $SecondaryColor
             &-social
-                display: flex 
-                justify-content: space-between
+                +flexDisplay(space-between)
                 div > span 
                     padding: $xsSpace $smSpace
                     margin-left: $xsSpace
@@ -161,8 +160,7 @@
                         display: none
     .more
         @extend .endContent
-        display: flex
-        justify-content: space-between
+        +flexDisplay(space-between)
         .tabs
             flex-basis: 60%
             &__buttons

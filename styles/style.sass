@@ -89,8 +89,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .rowProductList
     margin-top: 30px
-    display: flex
-    justify-content: space-between
+    +flexDisplay(space-between)
     &__item
         flex-basis: $xsWidth
         &-img
@@ -108,8 +107,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
                 visibility: hidden
                 opacity: 0
                 transition: opacity 0.5s, visibility 0.5s
-                display: flex
-                justify-content: space-between
+                +flexDisplay(space-between)
                 a
                     flex: 2
                     display: block
@@ -134,8 +132,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
                 color: black
             &-price
                 padding: $smSpace 0 20px 0
-                display: flex
-                justify-content: center
+                +flexDisplay(center)
                 align-items: flex-end
                 &>span
                     margin: 0 $xsSpace
@@ -158,7 +155,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
             img 
                 width: 90%
         &-describe
-            flex-basis: 40%
+            flex-basis: 60%
             &-title 
                 font-weight: normal
             &-price
@@ -185,5 +182,19 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
             +slideBackground("slide-2")
         100%
             +slideBackground("slide-3")
+    
+.blogListItem
+    &__title
+        color: black
+    img
+        margin-bottom: $mdSpace
+    h3 
+        cursor: pointer
+        margin-bottom: $xsSpace
+    small
+        color: #cacaca
+    p 
+        color: $SecondaryColor
+        padding: $xsSpace 0
 
-@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist', 'pages/cart', 'pages/about'
+@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist', 'pages/cart', 'pages/about', 'pages/blog'
