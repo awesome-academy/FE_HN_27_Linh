@@ -68,3 +68,14 @@
         i 
             color: $iconColor
             margin-right: $xsSpace
+
+=itemTag ($color)
+    display: block
+    float: left
+    padding: $xsSpace
+    +createSolidBorder(1px, $SecondaryColor)
+    margin: 0 $smSpace $smSpace 0
+    &:hover
+        background-color: $color
+        color: white !important
+        border-color: $color

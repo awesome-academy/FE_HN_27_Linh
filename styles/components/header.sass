@@ -4,8 +4,7 @@ header
         width: $lgWidth
         padding: 15px 0
         .container
-            display: flex
-            justify-content: space-between
+            +flexDisplay(space-between)
         a 
             &:hover 
                 border-bottom: 1px solid $PrimaryColor
@@ -45,13 +44,11 @@ header
         padding: 10px 0
         position: relative
         .container
-            display: flex 
-            justify-content: space-between
+            +flexDisplay(space-between)
             align-items: center
         &__list
             flex-basis: $mdWidth
-            display: flex
-            justify-content: space-between
+            +flexDisplay(space-between)
             &-item 
                 font-size: 1.1rem
                 color: white

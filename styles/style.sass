@@ -197,4 +197,37 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
         color: $SecondaryColor
         padding: $xsSpace 0
 
-@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist', 'pages/cart', 'pages/about', 'pages/blog'
+.clearfix
+     clear: both
+
+.textInput, .textArea
+    width: 100%
+    +flexDisplay(space-between)
+    margin-top: 1.5rem
+    label
+        width: 10%
+    input, textarea
+        +createSolidBorder(1px, $BorderColor)
+        width: 90%
+        padding: $smSpace
+
+.blogComment
+    margin-top: 1.5rem
+    & > *
+        color: $SecondaryColor
+        padding: $mdSpace 25px
+    &__head
+        +flexDisplay(space-between)
+        background-color: $BorderColor
+        border-radius: 5px
+        font-style: italic
+        &-more
+            display: flex
+            &-author 
+                padding-right: 20px
+                margin-right: $mdSpace
+                border-right: 1px solid $SecondaryColor
+        &-reply 
+            text-decoration: underline
+
+@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist', 'pages/cart', 'pages/about', 'pages/blog', 'pages/blogDetail'
