@@ -182,7 +182,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
             +slideBackground("slide-2")
         100%
             +slideBackground("slide-3")
-    
+
 .blogListItem
     &__title
         color: black
@@ -206,6 +206,8 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin-top: 1.5rem
     label
         width: 10%
+        span
+            margin-left: $xsSpace
     input, textarea
         +createSolidBorder(1px, $BorderColor)
         width: 90%
@@ -230,4 +232,21 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
         &-reply 
             text-decoration: underline
 
-@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist', 'pages/cart', 'pages/about', 'pages/blog', 'pages/blogDetail'
+.customCheckbox 
+    position: relative
+    visibility: hidden
+    &::after
+        visibility: visible
+        content: ""
+        position: absolute
+        width: 60%
+        height: 60%
+        top: 0
+        left: 0
+        transform: translateY(30%)
+        background-color: $BorderColor
+        +createSolidBorder(1px, $SecondaryColor)
+    &:checked::after
+        background-color: $PrimaryColor
+
+@import 'components/header', 'components/footer', 'pages/home', 'pages/detail', 'pages/pdlist', 'pages/cart', 'pages/about', 'pages/blog', 'pages/blogDetail', 'pages/login'
