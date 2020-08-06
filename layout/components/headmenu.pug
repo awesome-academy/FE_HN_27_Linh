@@ -1,8 +1,14 @@
 .container
     .headMenu__left
-        each val in headerItems 
-            a(href="#")=val 
-            span -
+        .headMenu__left-normal
+            each val in headerItems 
+                a(href="#")=val 
+                span -
+        .headMenu__left-button 
+            i.fas.fa-bars
+            ul.headMenu__left-button-list
+                each val in headerItems
+                    li: a(href="#")=val
     .headMenu__right
         form
             input(placeholder="Tìm kiếm ở đây...")
