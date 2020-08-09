@@ -14,8 +14,9 @@ block content
                             each val in orderHeadLinks
                                 a(href="#")=val 
                                 span |
-                    table.order__list-body
-                        +orderTable(orderList)
+                    .order__list-body
+                        table
+                            +orderTable(orderList)
                 .order__info 
                     .order__info-inner
                         h2 THÔNG TIN KHÁCH HÀNG 

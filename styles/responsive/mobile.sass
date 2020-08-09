@@ -1,6 +1,10 @@
 @media only screen and (max-width: $mobile)
+    .container
+        width: 95%
+
     .rowProductList
-        flex-wrap: wrap
+        &__wrapper
+            flex-wrap: wrap
         &__item 
             flex-basis: $smWidth
             margin-bottom: $lgSpace
@@ -134,6 +138,8 @@
     .order
         &__info-inner-item
             float: none
+        &__list-body
+            overflow-x: auto
     
     .contact
         &__inner

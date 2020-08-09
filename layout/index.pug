@@ -36,7 +36,7 @@ block content
                 .new__title
                     +titleDark("Sản phẩm mới")
                 .new__product
-                    +productListItem (newProducts)
+                    +productListItem (newProducts, true)
 
         .gallery
             +galleryItem([1, 2, 3, 4, 5, 6, 7, 8])
@@ -46,7 +46,7 @@ block content
                 .new__title
                     +titleDark("SẢN PHẨM BÁN CHẠY")
                 .new__product
-                    +productListItem (bestSellerProducts)
+                    +productListItem (bestSellerProducts, true)
             .other 
                 .other__blog
                     .other__blog-title

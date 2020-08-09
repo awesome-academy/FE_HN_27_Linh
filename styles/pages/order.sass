@@ -25,18 +25,19 @@
                 span:last-child
                     display: none
         &-body  
-            width: 100%
-            border-collapse: collapse
-            text-align: center
-            +createSolidBorder(1px, $BorderColor)
-            th 
-                text-transform: uppercase
+            table
+                width: 100%
+                border-collapse: collapse
+                text-align: center
                 +createSolidBorder(1px, $BorderColor)
-            th, td 
-                padding: $mdSpace
-                vertical-align: top
-            td 
-                border-left: 1px solid $BorderColor
+                th 
+                    text-transform: uppercase
+                    +createSolidBorder(1px, $BorderColor)
+                th, td 
+                    padding: $mdSpace
+                    vertical-align: top
+                td 
+                    border-left: 1px solid $BorderColor
             &-code
                 text-align: start
     &__info
