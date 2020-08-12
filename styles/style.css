@@ -84,7 +84,7 @@ button {
   margin-bottom: 5px;
 }
 
-.endContent, .login, .blogDetail, .blog, .about, .cart, .pdList .wrapper, .pdList .slide, .pdDetail .product, .pdDetail .more, .pdDetail .detail, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
+.endContent, .signup, .login, .blogDetail, .blog, .about, .cart, .pdList .wrapper, .pdList .slide, .pdDetail .product, .pdDetail .more, .pdDetail .detail, .home .gallery, .home .container .other, .home .container .new, .home .container .intro {
   margin-bottom: 6rem;
 }
 
@@ -362,15 +362,39 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin-right: 10px;
 }
 
-.home {
-  background: url("../assets/images/product.png") left top no-repeat, url("../assets/images/product2.png") right top no-repeat;
-  background-size: 20%, 12%;
+.customCheckbox {
+  position: relative;
+  visibility: hidden;
 }
-.home .container .intro {
-  padding-top: 5rem;
-  width: 70%;
-  margin: 0 auto 6rem auto;
-  text-align: center;
+.customCheckbox::after {
+  visibility: visible;
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  transform: translateY(30%);
+  background-color: #e6e6e6;
+  border: 1px solid #818181;
+}
+.customCheckbox:checked::after {
+  background-color: #e6ae48;
+}
+
+header {
+  position: relative;
+}
+header .headMenu {
+  width: 100%;
+  padding: 15px 0;
+}
+header .headMenu .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .headMenu a:hover {
+  border-bottom: 1px solid #e6ae48;
 }
 
 .blogListItem__title {
@@ -451,7 +475,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   height: 60%;
   top: 0;
   left: 0;
-  transform: translateY(30%);
+  transform: translateY(40%);
   background-color: #e6e6e6;
   border: 1px solid #818181;
 }
@@ -1097,7 +1121,6 @@ footer .end {
 }
 .pdList .wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
@@ -1402,6 +1425,42 @@ footer .end {
 }
 .login__form-submit > div input {
   background-color: #818181;
+}
+
+.signup__head {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.signup__head button {
+  padding: 6px 50px;
+}
+.signup__form {
+  padding: 50px;
+  border: 1px solid #e6e6e6;
+}
+.signup__form-title h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.signup__form-input {
+  margin-top: 2rem;
+}
+.signup__form-submit {
+  margin-left: 10%;
+}
+.signup__form-submit > div {
+  margin: 1.5rem 0 2rem;
+}
+.signup__form-submit > div input {
+  background-color: #818181;
+}
+.signup__form-btn {
+  text-align: end;
+  margin-top: 1.5rem;
+}
+.signup__form-btn button {
+  margin-left: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
