@@ -128,12 +128,15 @@ mixin newBlogListItem (images)
                     |
                     | 12 /06/2015 
 
-mixin createTextInput (title, texttype, require, name)
+mixin createTextInput (title, texttype, require, name, value)
     .textInput
         label(for=name)=title 
             if (require == 1)
                 span * 
-        input(type=texttype name=name)
+        if (value != "")
+            input(type=texttype name=name value=value)
+        else
+            input(type=texttype name=name)
 
 mixin createTextArea (title, require, name)
     .textArea
@@ -167,3 +170,18 @@ mixin orderTable (data)
             td.order__list-body-code-total=data.total 
             td.order__list-body-code-status=data.status
             td.order__list-body-code-link: a(href="#") Chi tiết
+
+mixin editProfile (type, data1, data2)
+    form.address__edit-form
+        if (type == "h3")
+            h3 ĐỊA CHỈ CỦA BẠN
+        else 
+            a(href="#") Thêm điạ chỉ
+        - for (var i = 0; i < 8; i++)  
+            +createTextInput(data1[i], "text", 0, data1[i], data2[i])
+        .address__edit-form-submit
+            div
+                input.customCheckbox(type="checkbox" name="setDefault" value="true")
+                label(for="setDefault") Đặt làm địa chỉ mặc định?
+            button.address__edit-form-submit-edit.btn CHỈNH SỬA ĐỊA CHỈ
+            button.btn XÓA  
